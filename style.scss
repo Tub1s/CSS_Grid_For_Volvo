@@ -1,0 +1,11 @@
+$basic-color: rgba(243, 170, 74, 0.952);
+$secondary-color: rgba(240, 168, 36, 0.9);
+
+body {
+    background: $basic-color;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
