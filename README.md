@@ -1,5 +1,5 @@
 # CSSGrid_For_Volvo
-CSS project for Volvo Internship Recruitment
+CSS project for Volvo Internship Recruitment. Uses CSS Grid to create web component with 12 columns.
 
 Project created in Virtual Studio Code IDE.
 
