@@ -1,11 +1,203 @@
-$basic-color: rgba(243, 170, 74, 0.952);
-$secondary-color: rgba(240, 168, 36, 0.9);
+$basic-color:  rgba(233, 182, 88, 0.973);
+$secondary-color: rgba(245, 179, 92, 0.952);
+$border-color: rgb(2, 15, 39);
 
-body {
-    background: $basic-color;
+html {
+    font-family: "Lucida Sans", sans-serif;
+    text-align: center;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.wrapper {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(12, [column-start] 1fr);
+
+    > * {
+        grid-column: column-start / span 12;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .header {
+        font-style: bold;
+        font-size: 30px;
+    }
+
+    .content h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+    .wrapper {
+        
+        > * {
+            background: white;
+        }
+
+        .sidebar {
+            grid-column: column-start / span 3;
+            grid-row: 3;
+        }
+
+        .fact {
+            grid-column: column-start / span 3;
+            grid-row: 4;
+        }
+
+        .content, .footer {
+            grid-column: column-start 4 / span 9;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .wrapper {
+
+        > * {
+            background: red;
+        }
+
+        .nav-bar {
+            grid-column: column-start / span 2;
+            grid-row: 2 / 4;
+        }
+
+        .content {
+            grid-column: column-start 3 / span 8;
+            grid-row: 2 / 4;
+        }
+
+        .sidebar {
+            grid-column: column-start 11 / span 2;
+        }
+
+        .fact {
+            grid-column: column-start 11 / span 2;
+            grid-row: 3;
+        }
+
+        .footer {
+            grid-column: column-start / span 12;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+
+        > * {
+            background: green;
+        }
+        
+        .nav-bar {
+            grid-column: column-start / span 2;
+            grid-row: 2 / 4;
+        }
+
+        .content {
+            grid-column: column-start 3 / span 8;
+            grid-row: 2 / 4;
+        }
+
+        .sidebar {
+            grid-column: column-start 11 / span 2;
+        }
+
+        .fact {
+            grid-column: column-start 11 / span 2;
+            grid-row: 3;
+        }
+
+        .footer {
+            grid-column: column-start / span 12;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .wrapper {
+
+        > * {
+            background: blue;
+        }
+
+        .nav-bar {
+            grid-column: column-start / span 2;
+            grid-row: 2 / 4;
+        }
+
+        .content {
+            grid-column: column-start 3 / span 8;
+            grid-row: 2 / 4;
+        }
+
+        .sidebar {
+            grid-column: column-start 11 / span 2;
+        }
+
+        .fact {
+            grid-column: column-start 11 / span 2;
+            grid-row: 3;
+        }
+
+        .footer {
+            grid-column: column-start / span 12;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+
+        > * {
+            background: cyan;
+        }
+
+        .nav-bar {
+            grid-column: column-start / span 2;
+            grid-row: 2 / 4;
+        }
+
+        .content {
+            grid-column: column-start 3 / span 8;
+            grid-row: 2 / 4;
+        }
+
+        .sidebar {
+            grid-column: column-start 11 / span 2;
+        }
+
+        .fact {
+            grid-column: column-start 11 / span 2;
+            grid-row: 3;
+        }
+
+        .footer {
+            grid-column: column-start / span 12;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
 }

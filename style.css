@@ -1,9 +1,196 @@
-body {
-  background: rgba(243, 170, 74, 0.952);
+html {
+  font-family: "Lucida Sans", sans-serif;
+  text-align: center;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: ([column-start] 1fr)[12];
+      grid-template-columns: repeat(12, [column-start] 1fr);
+}
+
+.wrapper > * {
+  grid-column: column-start / span 12;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.wrapper .header {
+  font-style: bold;
+  font-size: 30px;
+}
+
+.wrapper .content h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .wrapper > * {
+    background: white;
+  }
+  .wrapper .sidebar {
+    grid-column: column-start / span 3;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .wrapper .fact {
+    grid-column: column-start / span 3;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .wrapper .content, .wrapper .footer {
+    grid-column: column-start 4 / span 9;
+  }
+  .wrapper .nav-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .wrapper > * {
+    background: red;
+  }
+  .wrapper .nav-bar {
+    grid-column: column-start / span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .content {
+    grid-column: column-start 3 / span 8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .sidebar {
+    grid-column: column-start 11 / span 2;
+  }
+  .wrapper .fact {
+    grid-column: column-start 11 / span 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .wrapper .footer {
+    grid-column: column-start / span 12;
+  }
+  .wrapper nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper > * {
+    background: green;
+  }
+  .wrapper .nav-bar {
+    grid-column: column-start / span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .content {
+    grid-column: column-start 3 / span 8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .sidebar {
+    grid-column: column-start 11 / span 2;
+  }
+  .wrapper .fact {
+    grid-column: column-start 11 / span 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .wrapper .footer {
+    grid-column: column-start / span 12;
+  }
+  .wrapper nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .wrapper > * {
+    background: blue;
+  }
+  .wrapper .nav-bar {
+    grid-column: column-start / span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .content {
+    grid-column: column-start 3 / span 8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .sidebar {
+    grid-column: column-start 11 / span 2;
+  }
+  .wrapper .fact {
+    grid-column: column-start 11 / span 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .wrapper .footer {
+    grid-column: column-start / span 12;
+  }
+  .wrapper nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper > * {
+    background: cyan;
+  }
+  .wrapper .nav-bar {
+    grid-column: column-start / span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .content {
+    grid-column: column-start 3 / span 8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .wrapper .sidebar {
+    grid-column: column-start 11 / span 2;
+  }
+  .wrapper .fact {
+    grid-column: column-start 11 / span 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .wrapper .footer {
+    grid-column: column-start / span 12;
+  }
+  .wrapper nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
